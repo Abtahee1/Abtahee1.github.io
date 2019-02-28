@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou|Indie+Flower" rel="stylesheet"> 
+<style>
+body {
+  font-family: 'Indie Flower', cursive;
+  margin: 0 auto;
+  max-width: 600px;
+  background: white;
+}
+div {
+  height: 300px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: black;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: red;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,89,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,89,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,89,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+  color: pink;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+
+  background-image: url("https://middletownfriedchickengyro.com/wp-content/uploads/2016/10/Beef-Gyro-1.png");
+  background-size:100% 100%;
+  height: 330px;
+ 
+
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/13/Chicken_Tikka_Masala_Curry.png");
+  background-size: 100% 100%;
+  height: 240px;
+ 
+
+  background-image: url("https://silk.com/sites/default/files/recipes/medium/MangoLassi_DT.png");
+  background-size: 100% 100%;
+  height: 300px;
+ 
+.price {
+  float: right;
+}
+  ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+      text-align: center;
+  }
+  li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+  }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Abtahee's Halal Restarant</h1>
+<h2>The Best Halal In The State.</h2>
+<ul>
+      <li><button onclick=appetizers()>Appetizers</a></li>
+      <li><button onclick=entrees()>Entrees</a></li>
+      <li><button onclick=desserts()>Desserts</a></li>
+    </ul>
+    
+
+<div id="food"></div>
+
+
+
+
+<script>
+  AppetizersImages = [
+          'url("https://middletownfriedchickengyro.com/wp-content/uploads/2016/10/Beef-Gyro-1.png")',
+          'url("http://www.cooktube.in/wp-content/uploads/2017/09/crispy-chicken-lollipop.jpg")',
+          'url("https://gourmandelle.com/wp-content/uploads/2018/02/falafel-wrap-recipe-falafel-la-lipie.jpg")',
+  ]
+  
+  AppetizersDivs = [
+          '<div class="item" onclick=this.classList.toggle("show-description")><p>Chicken gyro <span class="price">$7</span><br /><small>Cooked chicken with seasoning in a fresh roll with various vegetables and sauce of your choice.</small></p></div>',
+         '<div class="item" onclick=this.classList.toggle("show-description")><p>Lollipop Chicken <span class="price">$8</span><br /><small>Freshly cooked lollipop chicken with a spicy orange sauce.</small></p></div>',
+         '<div class="item" onclick=this.classList.toggle("show-description")><p>Beef Falafel <span class="price">$8</span><br /><small>Freshly cooked beef falalfel with various vegetables and with white sauce and hot sauce.</small></p></div>',
+
+  ]
+  
+  
+  
+  
+  
+  EntreesImages = [
+          'url("https://punjabidesifoods.com/wp-content/uploads/2018/07/beef-biryani-1-min-750x458.jpg")',
+          'url("https://www.thespruceeats.com/thmb/ufEMXGg31vTYn4B8S-_QMlwiCGM=/464x321/filters:no_upscale():max_bytes(150000):strip_icc()/chickensoupspot-56a9491e3df78cf772a56f85.jpg")',
+          'url("https://upload.wikimedia.org/wikipedia/commons/1/13/Chicken_Tikka_Masala_Curry.png")',
+  ]
+  EntreesDivs = [
+          '<div class="item" onclick=this.classList.toggle("show-description")><p>Beef Biryani <span class="price">$15</span><br /><small> Spicy beef bites with bell peppers with fragrant and delicious rice.All made with spicy seasoning </small></p></div>',
+         '<div class="item" onclick=this.classList.toggle("show-description")><p>Chicken Thai Soup <span class="price">$9</span><br /><small>Delicious chicken thai soup made with eggs, coconut milk, ginger, lemon grass, peppers and vinager with small boneless chicken bites.</small></p></div>',
+         '<div class="item" onclick=this.classList.toggle("show-description")><p>Chicken Tika Masala <span class="price">$13</span><br /><small>Freshly cooked and marinated chicken tender bites in a spicy orange sauce and fried rice of naan on the side .</small></p></div>',
+  ]
+  
+  DessertImages = [
+          'url("https://foodsogoodmall.com/wp-content/uploads/2016/04/Mango-Ice-Cream-1000x500.jpg")',
+          'url("https://media.chefdehome.com/350/240/1/gulab-jamun/indian-gulab-jamun-chefdehome-2.jpg")',
+          'url("https://cdn.brainfoodstudio.com/wp-content/uploads/2017/06/mango-lassi-3.jpg?x45264")',
+  ]
+  DessertsDivs = [
+          '<div class="item" onclick=this.classList.toggle("show-description")><p>Mango Ice Cream <span class="price">$2.50</span><br /><small>Mango ice cream made with mangoes, cream, and sweetened condensed milk.</small></p></div>',
+         '<div class="item" onclick=this.classList.toggle("show-description")><p>Gulab Jamon <span class="price">$4</span><br /><small>Deep fried milk donuts dipped in a sweet sugar syrup.</small></p></div>',
+         '<div class="item" onclick=this.classList.toggle("show-description")><p>Mango Lassi <span class="price">$2.75</span><br /><small>Made with fresh mangoes, yogurt milk, and sugar to bring sweetness your your mouth .</small></p></div>',
+  ]
+    $('div').on('click', function() {
+        $(this).toggleClass('show-description');
+    });
+    
+  function  appetizers() {
+    apps = document.getElementById("food")
+    apps.innerHTML = ""
+    apps.innerHTML += AppetizersDivs[0]
+    apps.innerHTML += AppetizersDivs[1]
+    apps.innerHTML += AppetizersDivs[2]
+    //alert("  hvgbgb     ")
+    items = document.getElementsByClassName("item")
+    items[0].style.background = AppetizersImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = AppetizersImages[1]
+    items[2].style.background = AppetizersImages[2]
+    items[2].style.backgroundSize = '100% 100%'
+  }
+  function entrees() {
+    ent = document.getElementById("food")
+    ent.innerHTML = ""
+    ent.innerHTML += EntreesDivs[0]
+    ent.innerHTML += EntreesDivs[1]
+    ent.innerHTML += EntreesDivs[2]
+     //alert( "gfggrgrg " )
+     items = document.getElementsByClassName("item")
+     for (i=0; i<3; i=i+1) {
+       items[i].style.background = EntreesImages[i]
+       items[i].style.backgroundSize = '100% 100%'
+      }
+    }
+  
+  function desserts() {
+    dess = document.getElementById("food")
+    dess.innerHTML = ""
+    dess.innerHTML += DessertsDivs[0]
+    dess.innerHTML += DessertsDivs[1]
+    dess.innerHTML += DessertsDivs[2]
+    //alert("efhefe")
+    items = document.getElementsByClassName("item")
+    for (i=0; i<3; i=i+1) {
+      items[i].style.background = DessertImages[i]
+      items[i].style.backgroundSize = '100% 100%'
+      }
+  }
+
+</script>
+
+</body>
