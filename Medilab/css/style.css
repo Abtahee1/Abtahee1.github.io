@@ -6,7 +6,7 @@
 */
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Germania One', cursive;
 	line-height: 20px;
 	color: #008000;
 	font-size: 300;
@@ -30,7 +30,7 @@ table {
 }
 h1, h2, h3, h4, h5, h6
 {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 600;
 	color: #008000;
 	
@@ -85,14 +85,15 @@ banner
 
 .navbar-brand
 {
-	font-family: 'Chewy', cursive;
+	font-family: 'Baloo Chettan', cursive;
 	font-size: 32px;
 }
 
 .navbar-brand img {
     padding-top: 2px;
-    width: 120px !important;
+    /*width: 120px !important;*/
 		margin-right: 15px;
+		margin-left:  -12px;
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
@@ -147,7 +148,7 @@ banner
 #banner{
 	background: url('https://usathoopshype.files.wordpress.com/2018/09/bucks-2018-19.jpg?w=1000&h=600&crop=1') no-repeat fixed;
 	background-size: 100% 100%;
-	min-height: 650px;
+	min-height: 500px;
 	position: relative;
 }
 .bg-color{
@@ -164,7 +165,8 @@ banner
 	color: #008000;
 }
 .banner-text h1{
-	font-family: 'Candal', sans-serif;
+
+	font-family: 'Baloo Chettan', cursive;
 	font-size: 35px;
 	text-transform: uppercase;
 	padding-bottom:15px;
@@ -293,71 +295,7 @@ doctor team
     padding-bottom: 10px;
 
 }
-/***************************************
-testimonial
-***************************************/
-#testimonial{
-    background-color: #eee;
-}
-.testi-details {
-    background: #fff;
-    padding: 14px 24px;
-    margin-bottom: 20px;
-    box-shadow: 3px 3px 2px 0px rgba(255, 229, 204, 0.5);
-    position: relative;
-}
-.testi-info a {
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    border-radius: 50%;
-    float: left;
-    margin-right: 10px;
-}
-.testi-info a img{
-	border-radius: 50%;
-}
-.testi-info h3 {
-    display: inline-block;
-    line-height: 22px;
-    font-weight: 600;
-    color: #000;
-    margin-top: 8px;
-}
-.testi-info h3 > span {
-    display: block;
-    line-height: 16px;
-    font-weight: 400;
-}
-.testi-details::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: transparent;
-    border-left: 0;
-    bottom: -40px;
-    left: 56px;
-    border-top-color: #fff;
-    border-width: 20px;
-}
-.testi-details::before {
-    content: '';
-    position: absolute;
-    transform: rotate(45deg);
-    width: 0px;
-    height: 0px;
-    bottom: -30px;
-    left: 45px;
-    border-style: solid;
-    border-width: 15px;
-    border-color: transparent;
-    z-index: -1;
-    box-shadow: 3px -13px 5px 0px rgba(255, 229, 204, 0.5);
-    border-left: 0;
-}
+
 /***************************************
 cta -2
 ***************************************/
