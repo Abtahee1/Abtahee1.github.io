@@ -149,6 +149,7 @@ banner
 	background: url('https://usathoopshype.files.wordpress.com/2018/09/bucks-2018-19.jpg?w=1000&h=600&crop=1') no-repeat fixed;
 	background-size: 100% 100%;
 	min-height: 500px;
+	max-height: 90%;
 	position: relative;
 }
 .bg-color{
