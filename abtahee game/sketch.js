@@ -99,10 +99,10 @@ function draw() {
   textSize(30)
   text("time:" + time.toFixed(0),100,45)
   text("score:" + score.toFixed(0),485*s,45)
+if (touches.length == 0) {
   if(keyIsDown(LEFT_ARROW)){
     x = x - 5.5
-}
-if (touches.length == 0) {	  
+}	  
    if(keyIsDown(RIGHT_ARROW)){
      x = x + 5.5
  }
