@@ -116,6 +116,7 @@ if (touches.length == 0) {
 else {
      x = touches[0].x
      y = touches[0].y
+}
   time= time-1
   b = b + 5*direction_h
   c = c + 5*direction_v
