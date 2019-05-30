@@ -102,15 +102,20 @@ function draw() {
   if(keyIsDown(LEFT_ARROW)){
     x = x - 5.5
 }
-  if(keyIsDown(RIGHT_ARROW)){
-    x = x + 5.5
+if (touches.length == 0) {	  
+   if(keyIsDown(RIGHT_ARROW)){
+     x = x + 5.5
+ }
+   if(keyIsDown(UP_ARROW)){
+     y = y - 5.5
+ }
+   if(keyIsDown(DOWN_ARROW)){
+     y = y + 5.5
+ }
 }
-  if(keyIsDown(UP_ARROW)){
-    y = y - 5.5
-}
-  if(keyIsDown(DOWN_ARROW)){
-    y = y + 5.5
-}
+else {
+     x = touches[0].x
+     y = touches[0].y
   time= time-1
   b = b + 5*direction_h
   c = c + 5*direction_v
